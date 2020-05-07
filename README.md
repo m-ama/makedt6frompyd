@@ -19,14 +19,14 @@ following paths per subject:
 
 **Optional Paths**:
 1. T1 anatomical image (.nii or .nii.gz)
-2. Output directory
+2. Output dt.6
 
 Then, execute this container with:
 
 ```
 docker run -it --rm
 -v [SOURCE DIRECTORY]:[MOUNT DIRECTORY]
-dmri/makedt6frompyd [MOUNT DIRECTORY/../PATH TO B0] [MOUNT DIRECTORY/../PATH TO T1] [MOUNT DIRECTORY/../OUTPUT DIRECTORY]
+dmri/makedt6frompyd [MOUNT DIRECTORY/../PATH TO B0] [MOUNT DIRECTORY/../PATH TO T1] [MOUNT DIRECTORY/../dt6.mat]
 ```
 
-Please ensure that path to files is relative to ``[MOUNT DIRECTORY]``
+**Note**: Please ensure that path to files is relative to ``[MOUNT DIRECTORY]``
