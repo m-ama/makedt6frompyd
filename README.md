@@ -1,4 +1,4 @@
-# mri/makedt6frompyd
+# dmri/makedt6frompyd
 Docker container to convert PyDesigner outputs to AFQ-compatible ``dt6.mat``
 
 ## Build
@@ -19,14 +19,20 @@ following paths per subject:
 
 **Optional Paths**:
 1. T1 anatomical image (.nii or .nii.gz)
-2. Output directory
+2. Output dt.6
 
 Then, execute this container with:
 
 ```
-docker run -it --rm
--v [SOURCE DIRECTORY]:[MOUNT DIRECTORY]
-dmri/makedt6frompyd [MOUNT DIRECTORY/../PATH TO B0] [MOUNT DIRECTORY/../PATH TO T1] [MOUNT DIRECTORY/../OUTPUT DIRECTORY]
+docker run -it --rm \
+-v [SOURCE DIRECTORY]:[MOUNT DIRECTORY] \
+dmri/makedt6frompyd [MOUNT DIRECTORY/../PATH TO B0] [MOUNT DIRECTORY/../PATH TO T1] [MOUNT DIRECTORY/../dt6.mat]
 ```
 
-Please ensure that path to files is relative to ``[MOUNT DIRECTORY]``
+**Note**: Please ensure that path to files is relative to ``[MOUNT DIRECTORY]``
+
+The general syntax for running this container is:
+
+```
+docker run [OPTIONS] dmri/makedt6frompyd [PATH TO B0] [PATH TO T1] [PATH TO OUTPUT DT6.MAT]
+```
