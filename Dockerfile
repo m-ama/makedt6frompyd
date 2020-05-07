@@ -21,4 +21,4 @@ COPY src /usr/local/bin/dtiMakeDt6FromPyD
 RUN chmod +x /usr/local/bin/dtiMakeDt6FromPyD/dtiMakeDt6FromPyD
 
 # Add entrypoint for dtiMakeDt6FromPyD
-ENTRYPOINT [ "dtiMakeDt6FromPyD" ]
+ENTRYPOINT [ "./usr/local/bin/dtiMakeDt6FromPyD/dtiMakeDt6FromPyD" ]
