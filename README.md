@@ -1,4 +1,4 @@
-# mri/makedt6frompyd
+# dmri/makedt6frompyd
 Docker container to convert PyDesigner outputs to AFQ-compatible ``dt6.mat``
 
 ## Build
