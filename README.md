@@ -24,9 +24,15 @@ following paths per subject:
 Then, execute this container with:
 
 ```
-docker run -it --rm
--v [SOURCE DIRECTORY]:[MOUNT DIRECTORY]
+docker run -it --rm \
+-v [SOURCE DIRECTORY]:[MOUNT DIRECTORY] \
 dmri/makedt6frompyd [MOUNT DIRECTORY/../PATH TO B0] [MOUNT DIRECTORY/../PATH TO T1] [MOUNT DIRECTORY/../dt6.mat]
 ```
 
 **Note**: Please ensure that path to files is relative to ``[MOUNT DIRECTORY]``
+
+The general syntax for running this container is:
+
+```
+docker run [OPTIONS] dmri/makedt6frompyd [PATH TO B0] [PATH TO T1] [PATH TO OUTPUT DT6.MAT]
+```
