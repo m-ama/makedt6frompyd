@@ -1,7 +1,7 @@
 # This is a Docker container to convert PyDesigner outputs inti
 # AFQ-compatible dt6.mat
 
-FROM dmri/mcr-v97:latest
+FROM dmri/mcr-v98:latest
 
 LABEL maintainer="Siddhartha Dhiman (dhiman@musc.edu)"
 LABEL org.label-schema.schema-version="1.0.0-rc1"
